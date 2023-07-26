@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos Prácticos Flexbox</title>
+
+    <style>
+        *, *::after, *::before{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .titulares{
+            background-color: #222;
+            color: #eee;
+            padding: 1rem;
+        }
+
+        .header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        main{
+            flex-grow: 1;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+
+        .menu ul {
+            list-style-type: none;
+        }
+
+        .hero-image{
+            background-image: url('https://picsum.photos/1280/720/');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(0, 0, 0, .75);
+            color: #fff;
+            min-height: 100vh;
+        }
+        .hero-image div {
+            min-height: inherit;
+            background-color: rgba(0, 0, 0, .75);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-image h1{
+            font-size: 5vw;
+        }
+
+        .flex-responsive{
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .flex-responsive-item{
+            border: thin solid #f60;
+            flex: 1 1 200px;
+        }
+
+
+
+        @media screen and (min-width: 1024px){
+            .header{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .menu ul {
+                display: flex;
+            }
+
+            .menu li{
+                padding: .5rem;
+            }
+            .flex-container{
+                display: flex;
+                align-items: center;
+            }
+            .flex-item{
+                flex: 0 0 50%;
+            }
+
+            .flex-order-1{
+                order: 1;
+            }
+
+            .flex-row-reverse{
+                flex-direction: row-reverse;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="titulares header">
+        <div class="logo">Logo</div>
+        <nav class="menu">
+            <ul>
+                <li><a href="">Section 1</a></li>
+                <li><a href="">Section 2</a></li>
+                <li><a href="">Section 3</a></li>
+                <li><a href="">Section 4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article class="hero-image">
+            <div>
+                <h1>Flexbox is F*G COOL!!!!!!!!!!</h1>
+            </div>
+        </article>
+        <section class="flex-container flex-row-reverse
+        ">
+            <article class="flex-item">
+                <h2>Titulo</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, labore dolore consequuntur itaque ex quod, atque corporis ullam architecto vitae cupiditate eligendi? Reprehenderit, aut. Voluptatibus ad esse ratione quas repellat?</p>
+            </article>
+            <article class="flex-item">
+                <img src="https://picsum.photos/400/400/" alt="Imagen">
+            </article>
+        </section>
+        <section class="flex-container">
+            <article class="flex-item">
+                <h2>Titulo</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, labore dolore consequuntur itaque ex quod, atque corporis ullam architecto vitae cupiditate eligendi? Reprehenderit, aut. Voluptatibus ad esse ratione quas repellat?</p>
+            </article>
+            <article class="flex-item">
+                <img src="https://picsum.photos/400/400/" alt="Imagen">
+            </article>
+        </section>
+        <section class="flex-container flex-row-reverse">
+            <article class="flex-item">
+                <h2>Titulo</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, labore dolore consequuntur itaque ex quod, atque corporis ullam architecto vitae cupiditate eligendi? Reprehenderit, aut. Voluptatibus ad esse ratione quas repellat?</p>
+            </article>
+            <article class="flex-item">
+                <img src="https://picsum.photos/400/400/" alt="Imagen">
+            </article>
+        </section>
+
+        <section class="flex-responsive">
+            <article class="flex-responsive-item">item 1</article>
+            <article class="flex-responsive-item">item 2</article>
+            <article class="flex-responsive-item">item 3</article>
+            <article class="flex-responsive-item">item 4</article>
+            <article class="flex-responsive-item">item 5</article>
+            <article class="flex-responsive-item">item 6</article>
+            <article class="flex-responsive-item">item 7</article>
+            <article class="flex-responsive-item">item 8</article>
+            <article class="flex-responsive-item">item 9</article>
+            <article class="flex-responsive-item">item 10</article>
+            <article class="flex-responsive-item">item 11</article>
+            <article class="flex-responsive-item">item 12</article>
+            <article class="flex-responsive-item">item 13</article>
+            <article class="flex-responsive-item">item 14</article>
+            <article class="flex-responsive-item">item 15</article>
+            <article class="flex-responsive-item">item 16</article>
+            <article class="flex-responsive-item">item 17</article>
+            <article class="flex-responsive-item">item 18</article>
+            <article class="flex-responsive-item">item 19</article>
+        </section>
+
+
+    </main>
+    <footer class="titulares">Sticky Footer</footer>
+    
+</body>
+</html>

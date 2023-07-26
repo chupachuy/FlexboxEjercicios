@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        *, *::after, *::before {
+            box-sizing: border-box;
+        }
+
+        .container{
+            width: 100%;
+            background-color: #333;
+            height: 400px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            align-content: flex-start;
+        }
+
+        .item{
+            border: thin solid #999;
+            /*width: 20%;*/
+            /*height: 20%;*/
+            background-color: #666;
+            color: #fff;
+            /*flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 100px;*/
+            flex: 0 1 100px;
+            order: 0;
+            align-self: stretch;
+        }
+
+        .item:nth-child(2){
+            order: -1;
+        }
+
+        .item:nth-child(3){
+            align-self: center;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <article class="item">Flex Item 1</article>
+        <article class="item">Flex Item 2</article>
+        <article class="item">Flex Item 3</article>
+        <article class="item">Flex Item 5</article>
+    </section>
+    <br>
+    <br>
+    <section class="container">
+        <article class="item">Flex Item 1</article>
+        <article class="item">Flex Item 2</article>
+        <article class="item">Flex Item 3</article>
+    </section>
+    <br>
+    <br>
+    <section class="container">
+        <article class="item">item 1</article>
+        <article class="item">item 2</article>
+        <article class="item">item 3</article>
+        <article class="item">item 4</article>
+        <article class="item">item 5</article>
+        <article class="item">item 6</article>
+        <article class="item">item 7</article>
+        <article class="item">item 8</article>
+        <article class="item">item 9</article>
+        <article class="item">item 10</article>
+        <article class="item">item 11</article>
+        <article class="item">item 12</article>
+        <article class="item">item 13</article>
+        <article class="item">item 14</article>
+        <article class="item">item 15</article>
+    </section>   
+</body>
+</html>
